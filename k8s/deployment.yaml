@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: hostname
-        image: ip999/hostname
+        image: ip999/hostname2
         env:
           - name: TEST
             value: FOO
