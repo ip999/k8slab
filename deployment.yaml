@@ -17,14 +17,12 @@ spec:
       containers:
       - name: hostname
         image: ip999/hostname
+        env:
+          - name: TEST
+            value: FOO
+          - name: MY_POD_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.name
         ports:
         - containerPort: 8080
-   env:
-- name: MY_POD_NAME
-  valueFrom:
-    fieldRef:
-      fieldPath: metadata.name
-- name: MY_POD_NAMESPACE
-  valueFrom:
-    fieldRef:
-      fieldPath: metadata.namespace
