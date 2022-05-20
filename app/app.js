@@ -8,8 +8,8 @@ const app = express();
 app.get('/', (req, res) => {
     res.json(
         {
-            message: `os.hostname = ${os.hostname()}`,
-            message2: `metadata = ${process.env.MY_POD_NAME}`
+            hostname: `${os.hostname()}`,
+            metadata: `${process.env.MY_POD_NAME}`
         }
     );
 });
